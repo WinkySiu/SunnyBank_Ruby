@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>陽信銀行</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/pikaday.css">
+  <link rel="stylesheet" href="css/site.css">
+  <style media="screen">
+    a, a:hover {
+      text-decoration: none;
+    }
+    .output-pdf{
+      width:150px;
+      height:40px;
+      margin: 20px auto;
+      border-radius: 3px;
+      background-color: #F4F4F4;
+      text-align:center;
+      line-height:40px;
+    }
+    .output-pdf:hover{
+      background-color: #dadada;
+    }
+  </style>
+</head>
+<body>
+
+  <h4 class="text-center" style="margin-top:20px">查詢</h4>
+  <hr>
+  <div class="text-center">
+    <input type="text" name="" value="" placeholder="關鍵字查詢" style="height:35px;width:200px;border-radius:5px;border: 1px solid #ccc;">
+  </div>
+
+
+
+  <div class="container" style="width:60%;margin-top:-20px">
+    <div class="row text-center">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <input type="checkbox" name="" value="倒閉"><span style="margin-left:20px">倒閉</span>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <input type="checkbox" name="" value="倒閉"><span style="margin-left:20px">違規</span>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <input type="checkbox" name="" value="倒閉"><span style="margin-left:20px">違約</span>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <input type="checkbox" name="" value="倒閉"><span style="margin-left:20px">超貸</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="container" style="width:50%;margin-top:10px">
+    <div class="row text-center">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <span style="margin-right:20px">時間：</span>
+            <input type="text" id="start-datepicker" style="height:35px;border-radius:5px;border: 1px solid #ccc;">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <span style="margin-left:-50px">至</span>
+            <input type="text" id="end-datepicker" style="margin-left:50px;height:35px;border-radius:5px;border: 1px solid #ccc;">
+        </div>
+    </div>
+  </div>
+
+  <div class="container" style="width:30%;">
+    <div class="row text-center">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <button type="button" class="btn btn-default" style="width:100px;height:35px" onclick="">確認</button>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button type="button" class="btn btn-default" style="width:100px;height:35px" onclick="">重設</button>
+        </div>
+    </div>
+  </div>
+
+  <h4 class="text-center" style="margin-top:40px">查詢結果</h4>
+  <div style="background-color:#F4F4F4;height:300px;width:100%;padding:40px 40px 40px 40px;overflow: scroll;">
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">1.		（植根法律網）司法院--刑事補償 106.04.26. 一百零六年度臺覆字第9號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">2.		（植根法律網）司法院刑事補償法庭 105.07.28. 一百零五年度台重覆字第13號重審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">3.		（植根法律網）司法院刑事補償法庭 104.01.29. 一百零四年度台覆字第1號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">4.		（植根法律網）司法院--冤獄賠償 103.03.26. 一百零三年度臺覆字第13號</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">5.		（植根法律網）司法院—冤獄賠償 100.11.29. 一百年度臺重覆字第33號</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">7.		（植根法律網）司法院--刑事補償 106.04.26. 一百零六年度臺覆字第9號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+  </div>
+
+  <div class="output-pdf" style="cursor:pointer">輸出PDF</div>
+
+  <h4 class="text-center" style="margin-top:40px">搜尋引擎</h4>
+  <div style="background-color:#F4F4F4;height:300px;width:100%;padding:40px 40px 40px 40px;overflow: scroll;">
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">1.		（植根法律網）司法院--刑事補償 106.04.26. 一百零六年度臺覆字第9號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">2.		（植根法律網）司法院刑事補償法庭 105.07.28. 一百零五年度台重覆字第13號重審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">3.		（植根法律網）司法院刑事補償法庭 104.01.29. 一百零四年度台覆字第1號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">4.		（植根法律網）司法院--冤獄賠償 103.03.26. 一百零三年度臺覆字第13號</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">5.		（植根法律網）司法院—冤獄賠償 100.11.29. 一百年度臺重覆字第33號</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+
+    <div class="article" style="margin-bottom:30px;">
+      <input type="checkbox" name="" value="倒閉">
+      <a href="#" style="text-decoration: none;">
+        <span style="margin-left:20px;font-weight:bold">7.		（植根法律網）司法院--刑事補償 106.04.26. 一百零六年度臺覆字第9號覆審決定書</span>
+      </a>
+      <p style="margin-left:60px;">按冤獄賠償法於民國一○○年七月六日修正公布名稱為刑事補償法及全文四十一條，自同年九月一日施行；對於施行前受羈押之被害人，該法雖未明文溯及適用，然參酌中央法規標準法第十八條所定從新從優之法律適用原則，並比較冤獄賠償法、刑事補償法補償相關規定，冤獄賠償法之規定未較有利於被害人，故應適用刑事補償法之規定。又補償之請求，應於不起訴處分確定日起二年內為之，刑事補償法第十三條前段定有明文。該請求補償期間之規定，係為督促請求權人於一定期間內行使其補償請求權，俾免權...</p>
+    </div>
+  </div>
+
+  <script src="pikaday.js"></script>
+  <script>
+  var picker = new Pikaday(
+  {
+      field: document.getElementById('start-datepicker'),
+      firstDay: 1,
+      minDate: new Date(1995, 12, 31),
+      maxDate: new Date(),
+      yearRange: [2000,2020]
+  });
+
+  var picker = new Pikaday(
+  {
+      field: document.getElementById('end-datepicker'),
+      firstDay: 1,
+      minDate: new Date(1995, 12, 31),
+      maxDate: new Date(),
+      yearRange: [2000,2020]
+  });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
